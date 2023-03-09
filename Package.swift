@@ -13,12 +13,12 @@ let package = Package(
         .library(
             name: "InfobipMobileMessagingRTC",
             targets: ["MobileMessagingRTCWrapper"]),
-        .library(
+   /*     .library(
             name: "InfobipRTC",
             targets: ["InfobipRTC"]),
         .library(
             name: "WebRTC",
-            targets: ["WebRTC"])
+            targets: ["WebRTC"])*/
     ],
     targets: [
         .target(name: "MobileMessagingWrapper", dependencies: ["MobileMessaging"]),
