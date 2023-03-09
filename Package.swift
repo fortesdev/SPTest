@@ -11,6 +11,9 @@ let package = Package(
             name: "InfobipMobileMessaging",
             targets: ["MobileMessaging"]),
         .library(
+            name: "InfobipMobileMessagingWithWebRTCUI",
+            targets: ["MobileMessagingWebRTCUI"]),
+        .library(
             name: "InfobipRTC",
             targets: ["InfobipRTC"]),
         .library(
@@ -22,6 +25,13 @@ let package = Package(
           name: "MobileMessaging",
           url: "https://github.com/infobip/mobile-messaging-sdk-ios/releases/download/10.9.0/MobileMessaging.xcframework.zip",
           checksum: "0184cc0617a92d4258529609247c432d507c36b650b367dd2d883e74c029010d"),
+        .binaryTarget(
+          name: "MobileMessagingWebRTCUI",
+          url: "https://github.com/infobip/mobile-messaging-sdk-ios/releases/download/10.9.0/MobileMessaging.xcframework.zip",
+          checksum: "0184cc0617a92d4258529609247c432d507c36b650b367dd2d883e74c029010d",
+          swiftSettings: [
+               .define("WEBRTCUI_ENABLED=1")
+            ]),
         .binaryTarget(
             name: "InfobipRTC",
             url: "https://rtc.cdn.infobip.com/ios/2/2.0.3/InfobipRTC.zip",
