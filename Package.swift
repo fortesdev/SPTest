@@ -8,11 +8,11 @@ let package = Package(
     ],
     products: [
         .library(
-            name: "InfobipMobileMessaging",
-            targets: ["MobileMessaging"]),
-        .library(
-            name: "InfobipMobileMessagingWithWebRTCUI",
+            name: "InfobipMobileMessagingAll",
             targets: ["MobileMessagingWebRTCUI"]),
+        .library(
+            name: "InfobipMobileMessagingCore",
+            targets: ["MobileMessaging"]),
         .library(
             name: "InfobipRTC",
             targets: ["InfobipRTC"]),
