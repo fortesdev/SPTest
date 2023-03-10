@@ -8,12 +8,12 @@ let package = Package(
         .iOS(.v12)
     ],
     products: [
-/*        .library(
-            name: "InfobipMobileMessaging",
-            targets: ["MobileMessagingWrapper"]),*/
         .library(
             name: "IBMobileMessaging",
             targets: ["MobileMessagingWrapper"]),
+	.library(
+            name: "IBMobileMessaging",
+            targets: ["MobileMessagingRTCWrapper"]),
     ],
     dependencies: [
         .package(url: "https://github.com/infobip/infobip-rtc-ios.git", from: "1.7.0")
@@ -22,9 +22,14 @@ let package = Package(
       //  .target(name: "MobileMessagingWrapper", dependencies: ["MobileMessaging"]),
         .binaryTarget(
           name: "MobileMessaging",
-          url: "https://github.com/infobip/mobile-messaging-sdk-ios/releases/download/10.9.0/MobileMessaging.xcframework.zip",
+          url: "https://github.com/fortesdev/SPTest/blob/main/MobileMessaging.framework.zip",
+          checksum: "0184cc0617a92d4258529609247c432d507c36b650b367dd2d883e74c029010d"),
+	.binaryTarget(
+          name: "MobileMessagingRTC",
+          url: "https://github.com/fortesdev/SPTest/blob/main/MobileMessagingWithRTC.framework.zip",
           checksum: "0184cc0617a92d4258529609247c432d507c36b650b367dd2d883e74c029010d"),
 
-        .target(name: "MobileMessagingWrapper", dependencies: ["MobileMessaging","infobip-rtc-ios"], swiftSettings: [.define("WEBRTCUI_ENABLED=1")]),
+        .target(name: "MobileMessagingWrapper", dependencies: ["MobileMessaging"]),
+	.target(name: "MobileMessagingRTCWrapper", dependencies: ["MobileMessagingRTC","infobip-rtc-ios"], swiftSettings: [.define("WEBRTCUI_ENABLED=1")]),
 	]
 )
