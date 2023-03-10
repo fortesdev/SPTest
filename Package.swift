@@ -14,6 +14,9 @@ let package = Package(
 	.library(
             name: "MobileMessagingWithRTC",
             targets: ["MobileMessagingRTCWrapper"]),
+	.library(
+            name: "MobileMessagingRTC",
+            targets: ["MobileMessagingRTC"]),
     ],
     dependencies: [
         .package(url: "https://github.com/infobip/infobip-rtc-ios.git", from: "1.7.0")
