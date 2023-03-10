@@ -3,16 +3,16 @@ import PackageDescription
 let targetDependencies: [Target.Dependency]
 
 let package = Package(
-    name: "IBMobileMessaging",
+    name: "MobileMessaging",
     platforms: [
         .iOS(.v12)
     ],
     products: [
         .library(
-            name: "IBMobileMessaging",
+            name: "MobileMessaging",
             targets: ["MobileMessagingWrapper"]),
 	.library(
-            name: "IBMobileMessaging",
+            name: "MobileMessagingWithRTC",
             targets: ["MobileMessagingRTCWrapper"]),
     ],
     dependencies: [
@@ -22,7 +22,7 @@ let package = Package(
       //  .target(name: "MobileMessagingWrapper", dependencies: ["MobileMessaging"]),
         .binaryTarget(
           name: "MobileMessaging",
-          url: "https://github.com/fortesdev/SPTest/blob/main/MobileMessaging.framework.zip",
+          url: "https://github.com/infobip/mobile-messaging-sdk-ios/releases/download/10.8.4/MobileMessaging.xcframework.zip",
           checksum: "0184cc0617a92d4258529609247c432d507c36b650b367dd2d883e74c029010d"),
 	.binaryTarget(
           name: "MobileMessagingRTC",
