@@ -26,7 +26,7 @@ let package = Package(
           checksum: "0184cc0617a92d4258529609247c432d507c36b650b367dd2d883e74c029010d"),
 	.binaryTarget(
           name: "MobileMessagingRTC",
-          url: "https://github.com/fortesdev/SPTest/blob/main/MobileMessagingWithRTC.framework.zip",
+          url: "https://github.com/fortesdev/SPTest/blob/main/MobileMessagingWithRTC.xcframework.zip",
           checksum: "0184cc0617a92d4258529609247c432d507c36b650b367dd2d883e74c029010d"),
 
         .target(name: "MobileMessagingWrapper", dependencies: ["MobileMessaging"]),
